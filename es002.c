@@ -13,16 +13,17 @@ typedef struct persona{
     int Data;
 }Persona;
 
-int fsize(FILE *fp){
-    int prev=ftell(fp);
-    fseek(fp, 0L, SEEK_END);
-    int sz=ftell(fp);
-    fseek(fp,prev,SEEK_SET);
-    return sz;
+int fsize(FILE *fp, char *riga, int lung){
+    int i;
+    while(fgets(riga, lung, fp)){
+        i++;
+    }
+    return i;
 }
 
 void bubbleSort(Persona *a, int n){
     int k, sup, temp;
+    char *temp1, *temp2;
     for (sup = 1; sup < n; sup++){
         for (k = 0; k < sup ; k++){
             if ((a+sup)->Data < (a+sup)->Data)
@@ -30,6 +31,13 @@ void bubbleSort(Persona *a, int n){
                 temp = (a+sup)->Data;
                 (a+sup)->Data = (a+k)->Data;
                 (a+k)->Data = temp;
+                temp1 = (a+sup)->Nome;
+                (a+sup)->Nome = (a+k)->Nome;
+                (a+k)->Nome = temp1;
+                temp2 = (a+sup)->Cognome;
+                (a+sup)->Cognome = (a+k)->Cognome;
+                (a+k)->Cognome = temp2;
+
             }
     }
 }
@@ -48,13 +56,13 @@ int main(){
     char riga[LUNG];
     int count=0, dim=0;
     if(fp!=NULL){
-    dim=sizeof(fp);
+    dim=sizeof(fp, riga, LUNG);
     p=(Persona*)malloc(dim*sizeof(Persona));
     a=p;
 
     while(fgets(riga, LUNG, fp))   {
-            (a+count)->Cognome=strtok(riga, ",");
-            (a+count)->Nome=strtok(NULL, ",");
+            (a+count)->Cognome=strdup(strtok(riga, ","));
+            (a+count)->Nome=strdup(strtok(NULL, ","));
             (a+count)->Data=atoi(strtok(NULL, ","));
             printf("%s %s %d\n", (a+count)->Cognome, (a+count)->Nome, (a+count)->Data);
             count++;
