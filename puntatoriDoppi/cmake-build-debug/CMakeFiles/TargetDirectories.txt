@@ -1,0 +1,3 @@
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/puntatoriDoppi/cmake-build-debug/CMakeFiles/puntatoriDoppi.dir
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/puntatoriDoppi/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/puntatoriDoppi/cmake-build-debug/CMakeFiles/rebuild_cache.dir

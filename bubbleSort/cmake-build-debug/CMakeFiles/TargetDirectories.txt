@@ -1,0 +1,3 @@
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/bubbleSort/cmake-build-debug/CMakeFiles/bubbleSort.dir
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/bubbleSort/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Nicola/Desktop/School/4AROB/tpsit/bubbleSort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
